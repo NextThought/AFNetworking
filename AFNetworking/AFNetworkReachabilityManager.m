@@ -155,6 +155,11 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     return self;
 }
 
+- (instancetype)init
+{
+	return [self initWithReachability: nil];
+}
+
 - (void)dealloc {
     [self stopMonitoring];
 

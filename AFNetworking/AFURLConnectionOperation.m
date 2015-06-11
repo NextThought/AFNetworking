@@ -205,6 +205,11 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     return self;
 }
 
+- (instancetype)init
+{
+	return [self initWithRequest: nil];
+}
+
 - (void)dealloc {
     if (_outputStream) {
         [_outputStream close];
